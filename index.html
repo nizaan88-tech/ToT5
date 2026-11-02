@@ -1,0 +1,924 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>தரம் 6–9 புதிய கலைத்திட்டம்</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@500;700;800&family=Noto+Sans+Tamil:wght@400;500;700&display=swap">
+<style>
+/* Layout: a 16:9 presentation stage centred in the window, one slide at a time; Previous / Next bar under it, credit footer below that. On phones the stage fills the screen and each slide scrolls. */
+:root{
+  --ink:#0a0f24;
+  --ink-2:#111936;
+  --line:rgba(255,255,255,.14);
+  --glass:rgba(255,255,255,.06);
+  --glass-2:rgba(255,255,255,.12);
+  --text:#eef2ff;
+  --muted:#aab5dc;
+  --acc:#7c9cff;
+  --acc-2:#ffd166;
+  /* subject-area colours */
+  --lang:#ff6b6b;
+  --sci:#4cc9f0;
+  --tech:#2ec4b6;
+  --soc:#ffb703;
+  --art:#b794f6;
+  --life:#9be564;
+  --opt:#8f9bc9;
+  /* grade colours */
+  --g6:#4cc9f0;
+  --g7:#2ec4b6;
+  --g8:#ffb703;
+  --g9:#ff6b6b;
+  --f-disp:"Catamaran","Noto Sans Tamil",system-ui,sans-serif;
+  --f-body:"Noto Sans Tamil","Catamaran",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--ink);color:var(--text);font-family:var(--f-body);font-size:16px;line-height:1.6;overflow:hidden;-webkit-text-size-adjust:100%}
+h1,h2,h3,p{margin:0}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-align:inherit}
+:focus-visible{outline:3px solid var(--acc-2);outline-offset:3px;border-radius:8px}
+.ic{width:1.2em;height:1.2em;flex:none}
+
+.app{height:100%;display:flex;flex-direction:column;background:radial-gradient(1100px 560px at 12% -12%,#1d2c6e,transparent 62%),radial-gradient(900px 560px at 104% 112%,#0e4b5f,transparent 58%),var(--ink)}
+
+/* ---------- stage ---------- */
+.viewport{position:relative;flex:1;min-height:0;display:grid;place-items:center;container-type:size;padding-block:10px;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+.stage{--u:1cqw;
+  --fs-xs:calc(var(--u)*1);--fs-s:calc(var(--u)*1.2);--fs-b:calc(var(--u)*1.5);--fs-m:calc(var(--u)*1.9);--fs-l:calc(var(--u)*2.5);--fs-xl:calc(var(--u)*3.1);--fs-hero:calc(var(--u)*8);--fs-num:calc(var(--u)*4.4);
+  position:relative;width:min(100cqw,calc(100cqh*16/9));aspect-ratio:16/9;container-type:inline-size;border-radius:calc(var(--u)*1.6);overflow:hidden;background:var(--ink-2);border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+
+.slide{position:absolute;inset:0;display:flex;flex-direction:column;gap:calc(var(--u)*1.5);padding:calc(var(--u)*3) calc(var(--u)*4.2) calc(var(--u)*2.6);overflow:hidden;opacity:0;visibility:hidden;transform:translateX(4%);transition:opacity .5s ease,transform .55s cubic-bezier(.2,.7,.2,1),visibility 0s linear .55s}
+.slide.is-active{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.slide.is-past{transform:translateX(-4%)}
+.sb{flex:1;min-height:0;display:grid;gap:calc(var(--u)*2)}
+.s2{background:radial-gradient(60cqw 40cqw at 100% 0,rgba(76,201,240,.2),transparent 60%),linear-gradient(160deg,#141c45,#0b1230)}
+.s3{background:radial-gradient(60cqw 40cqw at 0 0,rgba(183,148,246,.22),transparent 60%),linear-gradient(160deg,#171a48,#0b1230)}
+.s4{background:radial-gradient(60cqw 40cqw at 100% 100%,rgba(46,196,182,.2),transparent 60%),linear-gradient(160deg,#10204a,#0b1230)}
+.s5{background:radial-gradient(60cqw 40cqw at 0 100%,rgba(255,107,107,.2),transparent 60%),linear-gradient(160deg,#1a1c48,#0b1230)}
+.s6{background:radial-gradient(60cqw 40cqw at 100% 0,rgba(255,183,3,.17),transparent 60%),linear-gradient(160deg,#14214b,#0b1230)}
+.s7{background:radial-gradient(60cqw 40cqw at 0 0,rgba(124,156,255,.22),transparent 60%),linear-gradient(160deg,#141c45,#0b1230)}
+
+.sh{display:flex;flex-direction:column;gap:calc(var(--u)*.5)}
+.eyebrow{display:inline-flex;align-items:center;gap:.7em;width:fit-content;font-size:var(--fs-xs);font-weight:700;letter-spacing:.12em;color:var(--muted)}
+.eyebrow::before{content:"";width:calc(var(--u)*2.4);height:3px;border-radius:3px;background:linear-gradient(90deg,var(--acc),var(--sci))}
+.sh h2{font-family:var(--f-disp);font-weight:800;font-size:var(--fs-xl);line-height:1.3;text-wrap:balance}
+.panel{background:var(--glass);border:1px solid var(--line);border-radius:calc(var(--u)*1.4);padding:calc(var(--u)*1.6);min-width:0}
+.note{font-size:var(--fs-s);color:var(--muted);line-height:1.7;max-width:100%}
+.chip{display:inline-flex;align-items:center;gap:.4em;padding:.15em .8em;border-radius:99px;border:1px solid var(--line);background:var(--glass);font-size:var(--fs-xs);font-weight:700;color:var(--muted);white-space:nowrap}
+.chip.col{color:var(--c);border-color:color-mix(in srgb,var(--c) 55%,transparent);background:color-mix(in srgb,var(--c) 14%,transparent)}
+
+.is-active .rise{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.is-active .rise.d1{animation-delay:.08s}
+.is-active .rise.d2{animation-delay:.16s}
+.is-active .rise.d3{animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+/* ---------- slide 1 : cover ---------- */
+.s1{background:#0a0f24;padding-block:calc(var(--u)*3.4) calc(var(--u)*3)}
+.fx{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(2px);animation:float 16s ease-in-out infinite alternate}
+.blob.b1{width:60cqw;height:60cqw;left:-18cqw;top:-26cqw;background:radial-gradient(circle,rgba(124,156,255,.55),transparent 66%)}
+.blob.b2{width:56cqw;height:56cqw;right:-16cqw;bottom:-30cqw;background:radial-gradient(circle,rgba(46,196,182,.45),transparent 66%);animation-duration:20s}
+.blob.b3{width:34cqw;height:34cqw;right:18cqw;top:-14cqw;background:radial-gradient(circle,rgba(255,107,107,.32),transparent 66%);animation-duration:24s}
+@keyframes float{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(3cqw,2cqw,0) scale(1.14)}}
+.dots-bg{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.14) 1.2px,transparent 1.4px);background-size:calc(var(--u)*2.4) calc(var(--u)*2.4);-webkit-mask-image:linear-gradient(120deg,#000 0,transparent 70%);mask-image:linear-gradient(120deg,#000 0,transparent 70%)}
+.mark{position:absolute;right:-1cqw;bottom:-6cqw;font-family:var(--f-disp);font-weight:800;font-size:calc(var(--u)*30);line-height:1;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.07);letter-spacing:-.04em;white-space:nowrap}
+.cover{position:relative;flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:calc(var(--u)*4);align-items:center}
+.cover-l{display:flex;flex-direction:column;align-items:flex-start;gap:calc(var(--u)*1.3)}
+.cover h1{font-family:var(--f-disp);font-weight:800;font-size:var(--fs-hero);line-height:1.2;color:var(--acc-2)}
+@supports (background-clip:text) or (-webkit-background-clip:text){
+  .cover h1{background:linear-gradient(95deg,#ffd166,#ff9f7a 45%,#7c9cff);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+}
+.cover .sub{font-family:var(--f-disp);font-weight:700;font-size:var(--fs-l);line-height:1.5;max-width:20em;text-wrap:balance}
+.cover .tags{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6)}
+.btn-main{display:inline-flex;align-items:center;gap:.6em;margin-top:calc(var(--u)*.6);min-height:calc(var(--u)*4);padding:0 calc(var(--u)*2.4);border-radius:99px;background:var(--text);color:var(--ink);font-weight:700;font-size:var(--fs-b);transition:transform .2s,box-shadow .2s}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(124,156,255,.35)}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*1.2)}
+.stat{position:relative;display:flex;flex-direction:column;gap:.2em;padding:calc(var(--u)*1.6);border-radius:calc(var(--u)*1.4);background:var(--glass);border:1px solid var(--line);overflow:hidden;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:transform .25s,background .25s,border-color .25s}
+.stat::after{content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:var(--c)}
+.stat:hover{transform:translateY(-4px);background:var(--glass-2);border-color:var(--c)}
+.stat b{font-family:var(--f-disp);font-weight:800;font-size:var(--fs-num);line-height:1.1;color:var(--c);white-space:nowrap}
+.stat.long b{font-size:calc(var(--fs-num)*.78)}
+.stat span{font-size:var(--fs-s);color:var(--text);line-height:1.5}
+.stat em{font-style:normal;font-size:var(--fs-xs);color:var(--muted);display:inline-flex;align-items:center;gap:.3em;margin-top:.3em}
+
+/* ---------- slide 2 : timeline matrix ---------- */
+.s2-body{grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}
+.matrix{display:grid;grid-template-columns:auto repeat(4,minmax(0,1fr));grid-template-rows:auto repeat(4,minmax(0,1fr));gap:calc(var(--u)*.7);min-height:0}
+.mx-year{display:grid;place-items:center;border-radius:calc(var(--u)*1);border:1.5px solid var(--line);background:var(--glass);font-family:var(--f-disp);font-weight:800;font-size:var(--fs-m);padding:.3em .5em;transition:background .2s,border-color .2s,color .2s}
+.mx-year:hover{background:var(--glass-2)}
+.mx-year.is-sel{background:var(--text);color:var(--ink);border-color:var(--text)}
+.mx-grade{display:flex;align-items:center;padding-right:calc(var(--u)*.8);font-weight:700;font-size:var(--fs-b);white-space:nowrap}
+.mx-cell{position:relative;display:grid;place-items:center;border-radius:calc(var(--u)*1);border:1.5px dashed rgba(255,255,255,.14);font-size:var(--fs-s);font-weight:700;color:var(--ink);transition:transform .3s,box-shadow .3s,opacity .3s}
+.mx-cell.on{border:0;background:linear-gradient(135deg,var(--c),color-mix(in srgb,var(--c) 62%,#fff));transform:scale(.96);opacity:.55}
+.mx-cell.on.col-sel{opacity:1;transform:scale(1)}
+.mx-cell.launch{box-shadow:0 0 0 3px var(--ink-2),0 0 0 5px var(--c)}
+.mx-cell.launch.col-sel{box-shadow:0 0 0 3px var(--ink-2),0 0 0 6px var(--text)}
+.mx-cell.on span{opacity:0;animation:fadein .5s .1s both}
+.is-active .mx-cell.on{animation:pop .5s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--k)*70ms)}
+@keyframes pop{from{opacity:0;scale:.6}to{opacity:1;scale:1}}
+@keyframes fadein{to{opacity:1}}
+.yearcard{display:flex;flex-direction:column;gap:calc(var(--u)*1.1);justify-content:center}
+.yearcard .big{font-family:var(--f-disp);font-weight:800;font-size:calc(var(--u)*8.5);line-height:1;letter-spacing:-.02em;background:linear-gradient(95deg,#4cc9f0,#7c9cff);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.yearcard p.stm{font-size:var(--fs-b);line-height:1.8}
+.yearcard p.stm strong{color:var(--acc-2)}
+.yearcard .lbl{font-size:var(--fs-xs);font-weight:700;letter-spacing:.1em;color:var(--muted)}
+.yearcard .gl{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6)}
+.gchip{padding:.2em .9em;border-radius:99px;font-weight:700;font-size:var(--fs-s);color:var(--ink);background:var(--c)}
+.s2 .note{padding:calc(var(--u)*1.1) calc(var(--u)*1.6);border-left:4px solid var(--acc);background:var(--glass);border-radius:calc(var(--u)*.8)}
+
+/* ---------- slide 3 : credit = time ---------- */
+.s3-body{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}
+.col-l{display:flex;flex-direction:column;gap:calc(var(--u)*1.5);min-height:0}
+.eq{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:calc(var(--u)*.8)}
+.eq .t{display:flex;flex-direction:column;align-items:flex-start;gap:.1em;padding:calc(var(--u)*1.1) calc(var(--u)*1.3);border-radius:calc(var(--u)*1.2);background:var(--glass);border:1px solid var(--line)}
+.eq .t b{font-family:var(--f-disp);font-weight:800;font-size:var(--fs-num);line-height:1.05;color:var(--c)}
+.eq .t span{font-size:var(--fs-s);color:var(--muted)}
+.eq .op{font-family:var(--f-disp);font-weight:800;font-size:var(--fs-l);color:var(--muted)}
+.picker{display:flex;align-items:center;flex-wrap:wrap;gap:calc(var(--u)*1)}
+.picker .lbl{font-weight:700;font-size:var(--fs-b)}
+.pill-group{display:inline-flex;gap:calc(var(--u)*.5);padding:calc(var(--u)*.4);border-radius:99px;background:var(--glass);border:1px solid var(--line)}
+.pill{min-width:calc(var(--u)*4.4);min-height:calc(var(--u)*3.2);display:grid;place-items:center;padding:0 calc(var(--u)*1.2);border-radius:99px;font-family:var(--f-disp);font-weight:800;font-size:var(--fs-m);transition:background .2s,color .2s}
+.pill:hover{background:var(--glass-2)}
+.pill[aria-pressed="true"],.pill[aria-checked="true"]{background:var(--c,var(--acc));color:var(--ink)}
+.hours{display:flex;flex-direction:column;gap:calc(var(--u)*.7);min-height:0}
+.hrow{display:grid;grid-template-columns:calc(var(--u)*7.4) minmax(0,1fr);align-items:center;gap:calc(var(--u)*1)}
+.hrow .hl{font-size:var(--fs-s);font-weight:700;color:var(--muted)}
+.hb{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:calc(var(--u)*.45)}
+.hb i{display:block;height:calc(var(--u)*2.3);border-radius:calc(var(--u)*.55);background:linear-gradient(180deg,#b794f6,#7c9cff);animation:pop .45s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--k)*28ms)}
+.calc-out{font-size:var(--fs-b);font-weight:700}
+.calc-out strong{color:var(--acc-2);font-family:var(--f-disp);font-size:var(--fs-m)}
+.acc{display:flex;flex-direction:column;gap:calc(var(--u)*1);min-height:0}
+.acc-i{border-radius:calc(var(--u)*1.2);border:1px solid var(--line);background:var(--glass);overflow:hidden;transition:border-color .25s,background .25s}
+.acc-i.open{border-color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent)}
+.acc-h{width:100%;display:flex;align-items:center;gap:calc(var(--u)*1);padding:calc(var(--u)*1.1) calc(var(--u)*1.3);font-weight:700;font-size:var(--fs-b);line-height:1.5}
+.acc-h .dot{width:calc(var(--u)*1.3);height:calc(var(--u)*1.3);border-radius:50%;background:var(--c);flex:none}
+.acc-h .chev{margin-left:auto;transition:transform .3s}
+.acc-i.open .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:0 calc(var(--u)*1.3) calc(var(--u)*1.2) calc(var(--u)*3.6);font-size:var(--fs-s);line-height:1.8;color:var(--text)}
+.acc-i.open .acc-b{display:block;animation:fadein .4s both}
+.cap{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.6)}
+
+/* ---------- slide 4 : subjects & credits ---------- */
+.s4-body{grid-template-columns:minmax(0,1.55fr) minmax(0,1fr)}
+.rows{display:grid;grid-template-rows:repeat(13,minmax(0,1fr));gap:calc(var(--u)*.35);min-height:0}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:calc(var(--u)*1.2);padding:0 calc(var(--u)*1.1);border-radius:calc(var(--u)*.9);border:1.5px solid transparent;background:var(--glass);transition:background .2s,border-color .2s,transform .2s}
+.row:hover{background:var(--glass-2);transform:translateX(3px)}
+.row.is-sel{border-color:var(--c);background:color-mix(in srgb,var(--c) 15%,transparent)}
+.nm{display:flex;align-items:center;gap:.7em;min-width:0;font-size:var(--fs-s);font-weight:500}
+.nm i{width:.75em;height:.75em;border-radius:50%;background:var(--c);flex:none}
+.nm .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.segs{display:flex;align-items:center;gap:calc(var(--u)*.4)}
+.seg{width:calc(var(--u)*3.4);height:calc(var(--u)*1.1);border-radius:99px;background:rgba(255,255,255,.1);transform-origin:left}
+.seg.on{background:var(--c);transform:scaleX(0)}
+.is-active .seg.on{transform:scaleX(1);transition:transform .55s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--r)*50ms + var(--k)*90ms)}
+.segs b{min-width:1.1em;text-align:right;font-family:var(--f-disp);font-size:var(--fs-m);font-weight:800;line-height:1;color:var(--c)}
+.side{display:flex;flex-direction:column;gap:calc(var(--u)*1.2);min-height:0}
+.detail{position:relative;flex:1;min-height:0;display:flex;flex-direction:column;gap:calc(var(--u)*.9);overflow:hidden;border-top:4px solid var(--c)}
+.detail .dn{font-family:var(--f-disp);font-weight:800;font-size:var(--fs-l);line-height:1.35}
+.detail .dn.long{font-size:var(--fs-b);line-height:1.6}
+.detail .cr{display:flex;align-items:baseline;gap:.4em;font-family:var(--f-disp);font-weight:800;color:var(--c)}
+.detail .cr b{font-size:calc(var(--u)*6);line-height:1}
+.detail .cr span{font-size:var(--fs-m)}
+.detail .kv{display:flex;flex-direction:column;gap:.3em;font-size:var(--fs-s);color:var(--muted);line-height:1.6}
+.detail .kv strong{color:var(--text)}
+.detail .tags{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.5)}
+.total{display:flex;align-items:center;gap:calc(var(--u)*1.3);padding:calc(var(--u)*1.2) calc(var(--u)*1.5)}
+.total b{font-family:var(--f-disp);font-weight:800;font-size:var(--fs-num);line-height:1;color:var(--acc-2)}
+.total span{font-size:var(--fs-s);line-height:1.5;color:var(--muted)}
+.total span strong{color:var(--text);display:block;font-size:var(--fs-b)}
+.link-btn{display:inline-flex;align-items:center;gap:.5em;font-size:var(--fs-s);font-weight:700;color:var(--acc-2);margin-top:.2em}
+.link-btn:hover{text-decoration:underline}
+
+/* ---------- slide 5 : modules ---------- */
+.s5-body{grid-template-rows:auto minmax(0,1fr) auto;gap:calc(var(--u)*1.3)}
+.ctrl{display:flex;align-items:center;flex-wrap:wrap;gap:calc(var(--u)*1.2)}
+.ctrl .lbl{font-weight:700;font-size:var(--fs-b)}
+.mods{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:calc(var(--u)*1.2);min-height:0}
+.mod{position:relative;display:flex;flex-direction:column;gap:calc(var(--u)*.7);padding:calc(var(--u)*1.4);border-radius:calc(var(--u)*1.4);background:var(--glass);border:1.5px solid var(--line);overflow:hidden;transition:transform .25s,background .25s,border-color .25s,opacity .25s}
+.mod:hover:not([aria-disabled="true"]){transform:translateY(-3px);background:var(--glass-2)}
+.mod.is-sel{border-color:var(--c);background:color-mix(in srgb,var(--c) 16%,transparent)}
+.mod[aria-disabled="true"]{opacity:.42;cursor:not-allowed}
+.mod .no{width:calc(var(--u)*3);height:calc(var(--u)*3);border-radius:calc(var(--u)*.9);display:grid;place-items:center;background:var(--c);color:var(--ink);font-family:var(--f-disp);font-weight:800;font-size:var(--fs-m)}
+.mod .mn{font-family:var(--f-disp);font-weight:800;font-size:var(--fs-m);line-height:1.35}
+.mod .chk{position:absolute;top:calc(var(--u)*1);right:calc(var(--u)*1);width:calc(var(--u)*2.4);height:calc(var(--u)*2.4);border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;color:var(--ink);transition:background .2s,border-color .2s}
+.mod.is-sel .chk{background:var(--c);border-color:var(--c)}
+.mod .chk svg{opacity:0}
+.mod.is-sel .chk svg{opacity:1}
+.mod .lock{font-size:var(--fs-xs);font-weight:700;color:var(--acc-2)}
+.mod .tg{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.5);margin-top:auto}
+.lg{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.5)}
+.lg .chip{cursor:pointer;color:var(--text)}
+.lg .chip[aria-pressed="true"]{background:var(--c);color:var(--ink);border-color:var(--c)}
+.summary{display:flex;align-items:center;flex-wrap:wrap;gap:calc(var(--u)*1.2);padding:calc(var(--u)*1.1) calc(var(--u)*1.6);border-radius:calc(var(--u)*1.2);border:1.5px solid var(--line);background:var(--glass);font-size:var(--fs-b)}
+.summary.ok{border-color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent)}
+.summary strong{font-family:var(--f-disp);font-size:var(--fs-m);color:var(--text)}
+.summary .sm{font-size:var(--fs-s);color:var(--muted)}
+
+/* ---------- slide 6 : weekly periods ---------- */
+.s6-body{grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr)}
+.waffle-wrap{display:flex;flex-direction:column;justify-content:center;gap:calc(var(--u)*1.3);min-height:0}
+.waffle{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:calc(var(--u)*.55)}
+.cell{aspect-ratio:1;border-radius:calc(var(--u)*.8);background:var(--c);transition:opacity .25s,transform .25s}
+.is-active .cell{animation:pop .5s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--k)*22ms)}
+.waffle.has-f .cell:not(.hl){opacity:.14}
+.waffle.has-f .cell.hl{transform:scale(1.06)}
+.wtot{display:flex;align-items:baseline;gap:.5em;flex-wrap:wrap}
+.wtot b{font-family:var(--f-disp);font-weight:800;font-size:calc(var(--u)*6.4);line-height:1;color:var(--acc-2)}
+.wtot span{font-size:var(--fs-b);font-weight:700}
+.wfocus{min-height:calc(var(--u)*4.2);font-size:var(--fs-s);color:var(--muted);line-height:1.6}
+.wfocus strong{color:var(--text);font-size:var(--fs-b)}
+.legend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-flow:column;grid-template-rows:repeat(8,minmax(0,1fr));gap:calc(var(--u)*.4) calc(var(--u)*1);min-height:0}
+.lgr{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:calc(var(--u)*.8);padding:0 calc(var(--u)*.9);border-radius:calc(var(--u)*.8);border:1.5px solid transparent;background:var(--glass);transition:background .2s,border-color .2s}
+.lgr:hover{background:var(--glass-2)}
+.lgr.is-sel{border-color:var(--c)}
+.lgr i{width:calc(var(--u)*1.3);height:calc(var(--u)*1.3);border-radius:calc(var(--u)*.4);background:var(--c)}
+.lgr .t{font-size:var(--fs-s);line-height:1.35;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical}
+.lgr b{font-family:var(--f-disp);font-weight:800;font-size:var(--fs-m);line-height:1}
+.gleg{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.5);margin-top:calc(var(--u)*.8)}
+.legend-col{display:flex;flex-direction:column;min-height:0}
+.legend-col .legend{flex:1}
+
+/* ---------- slide 7 : comparison ---------- */
+.s7-body{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr)}
+.cmp{display:flex;flex-direction:column;gap:calc(var(--u)*.9);min-height:0}
+.cmp-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:calc(var(--u)*1)}
+.keys{display:flex;gap:calc(var(--u)*1.4);font-size:var(--fs-s);font-weight:700}
+.keys span{display:inline-flex;align-items:center;gap:.5em}
+.keys i{width:calc(var(--u)*1.6);height:calc(var(--u)*.9);border-radius:99px}
+.keys .k1 i{background:var(--acc)}
+.keys .k2 i{background:var(--acc-2)}
+.sorter{display:inline-flex;align-items:center;gap:calc(var(--u)*.6);font-size:var(--fs-s);color:var(--muted)}
+.sorter .pill-group .pill{min-height:calc(var(--u)*2.6);min-width:0;font-family:var(--f-body);font-size:var(--fs-s);font-weight:700;padding:0 calc(var(--u)*1.1)}
+.crows{flex:1;min-height:0;display:grid;grid-template-rows:repeat(15,minmax(0,1fr));gap:calc(var(--u)*.3)}
+.cr-row{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.5fr);align-items:center;gap:calc(var(--u)*1);padding:0 calc(var(--u)*1);border-radius:calc(var(--u)*.8);border:1.5px solid transparent;background:var(--glass);transition:background .2s,border-color .2s}
+.cr-row:hover{background:var(--glass-2)}
+.cr-row.is-sel{border-color:var(--text)}
+.cr-row .t{font-size:var(--fs-s);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bars{display:flex;flex-direction:column;gap:calc(var(--u)*.2);min-width:0}
+.br em{font-size:var(--fs-xs)}
+.br{display:flex;align-items:center;gap:calc(var(--u)*.6);height:calc(var(--u)*.7)}
+.br i{display:block;height:100%;border-radius:99px;width:0;min-width:0}
+.br.c i{background:var(--acc)}
+.br.p i{background:var(--acc-2)}
+.is-active .br i{width:var(--w);transition:width .7s cubic-bezier(.2,.7,.2,1);transition-delay:calc(var(--r)*40ms)}
+.br em{font-style:normal;font-family:var(--f-disp);font-weight:800;font-size:var(--fs-s);line-height:1;min-width:1.2em}
+.br.c em{color:var(--acc)}
+.br.p em{color:var(--acc-2)}
+.insights{display:flex;flex-direction:column;gap:calc(var(--u)*1.1);min-height:0}
+.ins-main{border-top:4px solid var(--text)}
+.ins-main .dn{font-family:var(--f-disp);font-weight:800;font-size:var(--fs-m);line-height:1.4;margin-bottom:.4em}
+.ins-main .dn.long{font-size:var(--fs-b)}
+.ins-main .pairs{display:flex;gap:calc(var(--u)*2.2)}
+.ins-main .pairs div{display:flex;flex-direction:column}
+.ins-main .pairs b{font-family:var(--f-disp);font-weight:800;font-size:calc(var(--u)*3.4);line-height:1}
+.insights .panel{padding:calc(var(--u)*1) calc(var(--u)*1.3)}
+.insights{gap:calc(var(--u)*.8)}
+.ins-main .pairs .a b{color:var(--acc)}
+.ins-main .pairs .b b{color:var(--acc-2)}
+.ins-main .pairs span{font-size:var(--fs-xs);color:var(--muted)}
+.ins-main .fn{font-size:var(--fs-xs);color:var(--muted);margin-top:.5em;line-height:1.6}
+.ins{font-size:var(--fs-s);line-height:1.7;color:var(--muted)}
+.ins strong{color:var(--text)}
+.ins .h{display:block;font-weight:700;font-size:var(--fs-b);color:var(--text);margin-bottom:.15em}
+.tot2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:calc(var(--u)*1)}
+.tot2 .panel{padding:calc(var(--u)*1) calc(var(--u)*1.3)}
+.tot2 b{font-family:var(--f-disp);font-weight:800;font-size:calc(var(--u)*2.8);line-height:1.1}
+.tot2 .a b{color:var(--acc)}
+.tot2 .b b{color:var(--acc-2)}
+.tot2 span{display:block;font-size:var(--fs-xs);color:var(--muted)}
+
+/* ---------- controls and footer ---------- */
+.controls{position:relative;flex:none;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;padding-block:8px 4px;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px))}
+.cbtn{display:inline-flex;align-items:center;gap:.55em;min-height:46px;padding:0 22px;border-radius:99px;border:1.5px solid rgba(255,255,255,.28);background:rgba(255,255,255,.07);font-weight:700;font-size:16px;transition:background .2s,transform .2s,opacity .2s}
+.cbtn:hover:not(:disabled){background:rgba(255,255,255,.18);transform:translateY(-1px)}
+.cbtn:disabled{opacity:.35;cursor:default}
+.cbtn.prev{justify-self:start}
+.cbtn.next{justify-self:end;background:var(--text);color:var(--ink);border-color:var(--text)}
+.cbtn.next:hover:not(:disabled){background:#fff}
+.mid{display:grid;justify-items:center}
+.dots{display:flex}
+.dot{width:26px;height:26px;display:grid;place-items:center}
+.dot::before{content:"";width:10px;height:10px;border-radius:99px;background:rgba(255,255,255,.35);transition:width .3s,background .3s}
+.dot:hover::before{background:rgba(255,255,255,.75)}
+.dot[aria-current="true"]::before{width:28px;background:var(--acc-2)}
+.meta{display:flex;gap:10px;font-size:13px;color:var(--muted);line-height:1.3}
+.meta #counter{font-weight:700;color:var(--text);font-variant-numeric:tabular-nums}
+.bar{position:absolute;left:0;right:0;top:0;height:3px;background:rgba(255,255,255,.08)}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc),var(--acc-2));transition:width .5s ease}
+.credit{flex:none;text-align:center;font-size:13px;letter-spacing:.08em;color:var(--muted);padding:2px 16px 6px}
+.credit b{color:var(--text);font-weight:700}
+
+/* ---------- phones and short windows : stage fills the screen, slides scroll ---------- */
+@media (max-width:760px),(max-height:520px){
+  .viewport{container-type:normal;display:block;padding:0}
+  .stage{--u:clamp(9.5px,2.5vw,12px);
+    --fs-xs:max(12px,calc(var(--u)*1.25));--fs-s:max(14px,calc(var(--u)*1.45));--fs-b:max(15.5px,calc(var(--u)*1.65));--fs-m:max(18px,calc(var(--u)*2));--fs-l:max(22px,calc(var(--u)*2.6));--fs-xl:max(25px,calc(var(--u)*3));--fs-hero:max(46px,calc(var(--u)*6.4));--fs-num:max(34px,calc(var(--u)*4.4));
+    position:absolute;width:auto;aspect-ratio:auto;container-type:normal;inset-block:8px;inset-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));border-radius:16px}
+  .slide{overflow-y:auto;overflow-x:hidden;padding:calc(var(--u)*2.4) calc(var(--u)*2) calc(var(--u)*2.6);gap:calc(var(--u)*1.6)}
+  .sb{flex:none;grid-template-columns:minmax(0,1fr)!important;grid-template-rows:none!important}
+  .cover h1{white-space:nowrap}
+  .chip{white-space:normal}
+  .cap .chip{border-radius:14px}
+  .cover{grid-template-columns:1fr;flex:none;margin-block:auto}
+  .mark{font-size:60vw;bottom:-12vw}
+  .matrix{grid-template-rows:auto repeat(4,calc(var(--u)*5.6))}
+  .mx-grade{font-size:var(--fs-s)}
+  .rows{grid-template-rows:none}
+  .row{min-height:48px}
+  .nm .t{white-space:normal}
+  .detail{flex:none}
+  .eq{grid-template-columns:minmax(0,1fr)}
+  .eq .op{display:none}
+  .hrow{grid-template-columns:1fr}
+  .eq .t,.picker,.hours,.col-l{min-width:0}
+  .picker .lbl{flex:1 1 100%}
+  .hb i{height:calc(var(--u)*2.4)}
+  .mods{grid-template-columns:1fr;grid-template-rows:none}
+  .legend{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}
+  .lgr{min-height:44px;padding-block:4px}
+  .waffle-wrap{align-items:stretch}
+  .crows{grid-template-rows:none}
+  .cr-row{grid-template-columns:1fr;padding-block:6px;gap:4px}
+  .cr-row .t{white-space:normal}
+  .br{height:calc(var(--u)*1.1)}
+  .s2-body .yearcard .big{font-size:calc(var(--u)*7)}
+  .cbtn{padding:0 16px}
+  .cbtn .lb{display:none}
+  .meta .nt{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  .seg.on{transform:scaleX(1)!important}
+  .br i{width:var(--w)!important}
+}
+</style>
+
+<div class="app">
+  <div class="viewport" id="viewport">
+    <main class="stage" id="stage">
+
+      <!-- 1 : cover -->
+      <section class="slide s1 is-active" id="s1" aria-label="முகப்பு">
+        <div class="fx" aria-hidden="true">
+          <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+          <div class="dots-bg"></div>
+          <div class="mark">6–9</div>
+        </div>
+        <div class="cover">
+          <div class="cover-l">
+            <span class="eyebrow">புதிய கல்வி மறுசீரமைப்புக்கள்</span>
+            <h1>தரம் 6 – 9</h1>
+            <p class="sub">புதிய கல்வி மறுசீரமைப்புக்களின் கீழ் கற்றல் காலம், பாடங்கள் மற்றும் பாடவேளைகள்</p>
+            <div class="tags">
+              <span class="chip">கனிஷ்ட இடைநிலை மட்டம்</span>
+              <span class="chip">திறமை மட்டங்கள் (Credits)</span>
+              <span class="chip">பாடசாலை நேர அட்டவணை</span>
+            </div>
+            <button type="button" class="btn-main" data-go="2"><span>ஆரம்பிக்கலாம்</span><span data-ic="arrow"></span></button>
+          </div>
+          <div class="stats">
+            <button type="button" class="stat" data-go="3" style="--c:var(--art)"><b>600</b><span>நிமிடங்கள் = 1 Credit</span><em>கற்றல் காலம் <span data-ic="arrow"></span></em></button>
+            <button type="button" class="stat" data-go="4" style="--c:var(--sci)"><b>29+1</b><span>Credits: அத்தியாவசியம் + விருப்பம்</span><em>பாடங்கள் <span data-ic="arrow"></span></em></button>
+            <button type="button" class="stat" data-go="6" style="--c:var(--soc)"><b>40</b><span>பாடவேளைகள் ஒரு வாரத்தில்</span><em>நேர அட்டவணை <span data-ic="arrow"></span></em></button>
+            <button type="button" class="stat long" data-go="2" style="--c:var(--lang)"><b>2027–30</b><span>தரம் 6 முதல் 9 வரை படிப்படியாக</span><em>அமுலாக்கம் <span data-ic="arrow"></span></em></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2 : roll-out -->
+      <section class="slide s2" id="s2" aria-label="நடைமுறைப்படுத்தும் ஆண்டுகள்" inert>
+        <header class="sh rise">
+          <span class="eyebrow">பகுதி 5.0 · நடைமுறைப்படுத்தல்</span>
+          <h2>புதிய கலைத்திட்ட மறுசீரமைப்பு நடைமுறைக்கு வரும் ஆண்டுகள்</h2>
+        </header>
+        <div class="sb s2-body rise d1">
+          <div class="matrix" id="matrix" role="group" aria-label="தரம் மற்றும் ஆண்டு"></div>
+          <div class="yearcard" id="yearcard" aria-live="polite"></div>
+        </div>
+        <p class="note rise d2">ஒவ்வொரு தரத்திற்கும் உரியவாறு புதிய கலைத்திட்டம் நடைமுறைப்படுத்தப்படும் ஆண்டு முதல் முன்னெடுத்துச் செல்லும் வகையில் பாடசாலை நேர அட்டவணை தயாரிக்கப்படல் வேண்டும்.</p>
+      </section>
+
+      <!-- 3 : credit and time -->
+      <section class="slide s3" id="s3" aria-label="கற்றல் காலம்" inert>
+        <header class="sh rise">
+          <span class="eyebrow">பகுதி 8.0 · கற்றல் காலம்</span>
+          <h2>ஒரு திறமை மட்டம் (Credit) எவ்வளவு கற்றல் காலம்?</h2>
+        </header>
+        <div class="sb s3-body rise d1">
+          <div class="col-l">
+            <div class="eq">
+              <div class="t" style="--c:var(--art)"><b>1</b><span>திறமை மட்டம் (Credit)</span></div>
+              <span class="op">=</span>
+              <div class="t" style="--c:var(--sci)"><b>10</b><span>கற்றல் மணித்தியாலங்கள்</span></div>
+              <span class="op">=</span>
+              <div class="t" style="--c:var(--soc)"><b>600</b><span>நிமிடங்கள்</span></div>
+            </div>
+            <div class="picker">
+              <span class="lbl">ஒரு தவணைக்குரிய Credits:</span>
+              <div class="pill-group" role="radiogroup" aria-label="Credits எண்ணிக்கை" id="credpick">
+                <button type="button" class="pill" role="radio" aria-checked="false" data-c="1" style="--c:var(--art)">1</button>
+                <button type="button" class="pill" role="radio" aria-checked="false" data-c="2" style="--c:var(--art)">2</button>
+                <button type="button" class="pill" role="radio" aria-checked="true" data-c="3" style="--c:var(--art)">3</button>
+              </div>
+            </div>
+            <div class="hours" id="hours" aria-live="polite"></div>
+            <p class="calc-out" id="calcout"></p>
+            <div class="cap">
+              <span class="chip">பாடங்கள் மொடியூல்களாக உருவாக்கப்பட்டுள்ளன</span>
+              <span class="chip">ஒவ்வொரு பாடத்திற்கும் குறைந்தது ஒரு தவணைக்கு ஒரு மொடியூல்</span>
+            </div>
+          </div>
+          <div class="acc" id="acc">
+            <h3 class="note" style="font-weight:700;color:var(--text);font-size:var(--fs-b)">10 மணித்தியாலங்களில் அடங்குபவை</h3>
+            <div class="acc-i open" style="--c:var(--sci)">
+              <button type="button" class="acc-h" aria-expanded="true"><span class="dot"></span><span>ஆசிரியர்–மாணவர் நேரடித் தொடர்பாடல் கற்றல் மணித்தியாலங்கள்</span><span class="chev" data-ic="chevD"></span></button>
+              <div class="acc-b">வகுப்பறைக்குள் இடம்பெறுபவை. சில பாடங்களுக்கு ஆசிரியரின் நேரடித் தலையீடு அதிகளவில் தேவைப்படுவதுடன், அத்தகைய பாடங்களுக்கு அதிக எண்ணிக்கையிலான பாடவேளைகள் ஒதுக்கப்பட்டுள்ளன.</div>
+            </div>
+            <div class="acc-i" style="--c:var(--soc)">
+              <button type="button" class="acc-h" aria-expanded="false"><span class="dot"></span><span>மாணவர்களின் சுயாதீனக் கற்றல் மணித்தியாலங்கள்</span><span class="chev" data-ic="chevD"></span></button>
+              <div class="acc-b">மாணவர் தாமாகக் கற்கும் நேரம். சில மொடியூல்களுக்கு அதிக சுயாதீனக் கற்றல் நேரம் தேவைப்படலாம்.</div>
+            </div>
+            <p class="note">இரு வகை மணித்தியாலங்களும் ஒரு Credit இன் 10 மணித்தியாலங்களுக்குள் உள்ளடங்குகின்றன.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 : subjects and credits -->
+      <section class="slide s4" id="s4" aria-label="பாடங்களும் Credits" inert>
+        <header class="sh rise">
+          <span class="eyebrow">பகுதி 6.1.3 · கனிஷ்ட இடைநிலை மட்டம் (தரம் 6–9)</span>
+          <h2>அத்தியாவசிய பாடங்களும் திறமை மட்டங்களும்</h2>
+        </header>
+        <div class="sb s4-body rise d1">
+          <div class="rows" id="rows" role="listbox" aria-label="பாடங்கள்"></div>
+          <div class="side">
+            <div class="panel detail" id="detail1" aria-live="polite"></div>
+            <div class="panel total">
+              <b>29</b>
+              <span><strong>அத்தியாவசிய பாடங்களின் மொத்த Credits</strong>S / T / E = சிங்களம் / தமிழ் / ஆங்கிலம்
+                <br><button type="button" class="link-btn" data-go="5">விருப்பத்திற்குரிய மொடியூல் (+1 Credit) <span data-ic="arrow"></span></button></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 : optional modules -->
+      <section class="slide s5" id="s5" aria-label="விருப்ப மொடியூல்கள்" inert>
+        <header class="sh rise">
+          <span class="eyebrow">பகுதி 6.1.3 · விருப்பத்திற்குரிய / தெரிவு செய்யக்கூடிய மொடியூல்கள்</span>
+          <h2>ஒவ்வொரு தவணைக்கும் ஒரு பாடத்தைத் தெரிவு செய்க (1 Credit)</h2>
+        </header>
+        <div class="sb s5-body rise d1">
+          <div class="ctrl">
+            <span class="lbl">தரம்:</span>
+            <div class="pill-group" role="radiogroup" aria-label="தரம்" id="gradepick"></div>
+            <span class="note" id="gradenote"></span>
+          </div>
+          <div class="mods" id="mods" role="listbox" aria-label="விருப்ப மொடியூல்கள்"></div>
+          <div class="summary" id="summary" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- 6 : weekly periods -->
+      <section class="slide s6" id="s6" aria-label="வாராந்தப் பாடவேளைகள்" inert>
+        <header class="sh rise">
+          <span class="eyebrow">பகுதி 5.0 · பாடசாலை நேர அட்டவணை</span>
+          <h2>ஒரு வாரத்தில் ஒதுக்கப்படும் 40 பாடவேளைகள்</h2>
+        </header>
+        <div class="sb s6-body rise d1">
+          <div class="waffle-wrap">
+            <div class="waffle" id="waffle" aria-label="40 பாடவேளைகள்"></div>
+            <div class="wtot"><b>40</b><span>பாடவேளைகள் / வாரம்</span></div>
+            <div class="wfocus" id="wfocus" aria-live="polite"></div>
+          </div>
+          <div class="legend-col">
+            <div class="legend" id="legend" role="listbox" aria-label="பாடங்கள்"></div>
+            <div class="gleg" id="gleg"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7 : comparison -->
+      <section class="slide s7" id="s7" aria-label="ஒப்பீடு" inert>
+        <header class="sh rise">
+          <span class="eyebrow">சுருக்கம் · Credits மற்றும் பாடவேளைகள்</span>
+          <h2>பாடம் ஒவ்வொன்றுக்கும் Credits எதிர் பாடவேளைகள்</h2>
+        </header>
+        <div class="sb s7-body rise d1">
+          <div class="cmp">
+            <div class="cmp-top">
+              <div class="keys"><span class="k1"><i></i>Credits</span><span class="k2"><i></i>பாடவேளைகள் / வாரம்</span></div>
+              <div class="sorter"><span>வரிசை:</span>
+                <div class="pill-group" role="radiogroup" aria-label="வரிசைப்படுத்தல்" id="sortpick">
+                  <button type="button" class="pill" role="radio" aria-checked="true" data-s="src">மூல வரிசை</button>
+                  <button type="button" class="pill" role="radio" aria-checked="false" data-s="pr">பாடவேளை</button>
+                  <button type="button" class="pill" role="radio" aria-checked="false" data-s="cr">Credit</button>
+                </div>
+              </div>
+            </div>
+            <div class="crows" id="crows" role="listbox" aria-label="பாடங்கள்"></div>
+          </div>
+          <div class="insights">
+            <div class="panel ins-main" id="insmain" aria-live="polite"></div>
+            <div class="panel ins"><span class="h">அதிக பாடவேளைகள்</span>தாய்மொழி, ஆங்கிலம், கணிதம், விஞ்ஞானம்: தலா <strong>3 Credits</strong>, தலா <strong>5 பாடவேளைகள்</strong>.</div>
+            <div class="panel ins"><span class="h">Credit அதிகம், பாடவேளை குறைவு</span>விளையாட்டுகள் / சங்கங்கள் / சமூகச் சேவைகள் / தொழில்சார் தயார்படுத்தல்: <strong>2 Credits</strong>, <strong>1 பாடவேளை</strong>.</div>
+            <div class="tot2">
+              <div class="panel a"><b>29 + 1</b><span>Credits</span></div>
+              <div class="panel b"><b>40</b><span>பாடவேளைகள் / வாரம்</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <nav class="controls" aria-label="Slide வழிசெலுத்தல்">
+    <div class="bar"><i id="progress"></i></div>
+    <button type="button" class="cbtn prev" id="prev"><span data-ic="chevL"></span><span class="lb">முந்தையது</span></button>
+    <div class="mid">
+      <div class="dots" id="dots"></div>
+      <div class="meta"><span id="counter">1 / 7</span><span class="nt" id="navtitle"></span></div>
+    </div>
+    <button type="button" class="cbtn next" id="next"><span class="lb">அடுத்தது</span><span data-ic="chevR"></span></button>
+  </nav>
+  <footer class="credit">Design By <b>M.Nishanthan</b></footer>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var $ = function(s, r){ return (r || document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
+
+  /* ---------- icons ---------- */
+  var PATHS = {
+    chevL:'<path d="M15 5l-7 7 7 7"/>',
+    chevR:'<path d="M9 5l7 7-7 7"/>',
+    chevD:'<path d="M5 9l7 7 7-7"/>',
+    arrow:'<path d="M5 12h14M13 6l6 6-6 6"/>',
+    check:'<path d="M5 12.5l4.5 4.5L19 7.5"/>'
+  };
+  function ic(n){
+    return '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + PATHS[n] + '</svg>';
+  }
+  $$('[data-ic]').forEach(function(el){ el.innerHTML = ic(el.getAttribute('data-ic')); });
+
+  /* ---------- data ---------- */
+  var GROUPS = {
+    lang:['மொழிகள்'], sci:['கணிதமும் விஞ்ஞானமும்'], tech:['தொழினுட்பம்'], soc:['சமூகமும் சமயமும்'],
+    art:['ஆரோக்கியமும் அழகியலும்'], life:['வாழ்க்கைத் திறன்கள்'], opt:['விருப்பம் / வாசிப்பு']
+  };
+  var ITEMS = [
+    {name:'தாய்மொழியும் இலக்கியமும்', short:'தாய்மொழியும் இலக்கியமும்', cr:3, pr:5, g:'lang', sh:0, tag:'சிங்களம் / தமிழ்'},
+    {name:'ஆங்கில மொழி', short:'ஆங்கில மொழி', cr:3, pr:5, g:'lang', sh:1, tag:''},
+    {name:'கணிதம்', short:'கணிதம்', cr:3, pr:5, g:'sci', sh:0, tag:'S / T / E'},
+    {name:'விஞ்ஞானம்', short:'விஞ்ஞானம்', cr:3, pr:5, g:'sci', sh:1, tag:'S / T / E'},
+    {name:'சுகாதாரமும் உடற்கல்வியும்', short:'சுகாதாரமும் உடற்கல்வியும்', cr:2, pr:2, g:'art', sh:0, tag:'S / T / E'},
+    {name:'சமயம்', short:'சமயம்', cr:2, pr:2, g:'soc', sh:1, tag:''},
+    {name:'தகவல் மற்றும் தொடர்பாடல் தொழினுட்பம்', short:'தகவல் & தொடர்பாடல் தொழினுட்பம்', cr:2, pr:2, g:'tech', sh:0, tag:'S / T / E'},
+    {name:'வாழ்க்கைக்கான தொழினுட்பவியல்', short:'வாழ்க்கைக்கான தொழினுட்பவியல்', cr:2, pr:2, g:'tech', sh:1, tag:'S / T'},
+    {name:'சமூகக் கல்வி (வரலாறு, புவியியல், குடியுரிமைக் கல்வி)', short:'சமூகக் கல்வி', cr:3, pr:4, g:'soc', sh:0, tag:'S / T / E'},
+    {name:'இரண்டாம் தேசிய மொழி (சிங்களம் / தமிழ்)', short:'இரண்டாம் தேசிய மொழி', cr:1, pr:1, g:'lang', sh:2, tag:'சிங்களம் / தமிழ்'},
+    {name:'அழகியல் கல்வி', short:'அழகியல் கல்வி', cr:2, pr:3, g:'art', sh:1, tag:''},
+    {name:'முயற்சியாண்மை மற்றும் நிதியியல் அறிவு', short:'முயற்சியாண்மை & நிதியியல் அறிவு', cr:1, pr:1, g:'life', sh:0, tag:'S / T / E'},
+    {name:'விளையாட்டுகள், சங்கங்களும் கழகங்களும் / சமூகச் சேவைகள் / தொழில்சார் தயார்படுத்தலும் வாழ்க்கைத் தேர்ச்சிகளும்', short:'விளையாட்டு · சங்கங்கள் · சேவைகள் …', cr:2, pr:1, g:'life', sh:1, tag:''},
+    {name:'விருப்பத்திற்குரிய / தெரிவு செய்யக்கூடிய பாடங்கள் / மொடியூல்கள்', short:'விருப்பத்திற்குரிய மொடியூல்', cr:1, pr:1, g:'opt', sh:0, tag:'', optional:true},
+    {name:'நூலகம் / வாசிப்பு', short:'நூலகம் / வாசிப்பு', cr:null, pr:1, g:'opt', sh:1, tag:''}
+  ];
+  function colorOf(it){
+    var base = 'var(--' + it.g + ')';
+    if (it.sh === 1) return 'color-mix(in srgb,' + base + ' 58%,#ffffff)';
+    if (it.sh === 2) return 'color-mix(in srgb,' + base + ' 66%,#000000)';
+    return base;
+  }
+  var MODS = [
+    {n:'மேலதிக கணிதம்', tag:'S / T / E', g:'sci'},
+    {n:'மேலதிக விஞ்ஞானம்', tag:'S / T / E', g:'sci'},
+    {n:'பிரயோக தொழினுட்பவியல்', tag:'S / T', g:'tech'},
+    {n:'பிரயோக டிஜிட்டல் தொழினுட்பவியல்', tag:'S / T / E', g:'tech'},
+    {n:'மொழி நயம்', tag:'', g:'lang', langs:['சிங்கள மொழி நயம்','தமிழ் மொழி நயம்','ஆங்கில மொழி நயம்']},
+    {n:'தொடர்பாடலும் ஊடகக் கல்வியும்', tag:'S / T / E', g:'soc', from:8}
+  ];
+
+  /* ---------- slide navigation ---------- */
+  var slides = $$('.slide');
+  var total = slides.length;
+  var TITLES = ['முகப்பு','நடைமுறைப்படுத்தல்','Credit & நேரம்','பாடங்களும் Credits','விருப்ப மொடியூல்கள்','வாராந்தப் பாடவேளைகள்','ஒப்பீடு'];
+  var cur = 0;
+  var dotsEl = $('#dots');
+  TITLES.forEach(function(t, i){
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'dot';
+    b.setAttribute('aria-label', (i + 1) + '. ' + t); b.title = t;
+    b.addEventListener('click', function(){ go(i, true); });
+    dotsEl.appendChild(b);
+  });
+  var dots = $$('.dot');
+  var prevBtn = $('#prev'), nextBtn = $('#next');
+  function updateNav(){
+    prevBtn.disabled = cur === 0;
+    nextBtn.disabled = cur === total - 1;
+    dots.forEach(function(d, i){ d.setAttribute('aria-current', i === cur ? 'true' : 'false'); });
+    $('#counter').textContent = (cur + 1) + ' / ' + total;
+    $('#navtitle').textContent = TITLES[cur];
+    $('#progress').style.width = ((cur + 1) / total * 100) + '%';
+  }
+  function go(i, setHash, force){
+    i = Math.max(0, Math.min(total - 1, i));
+    if (i === cur && !force) return;
+    slides.forEach(function(s, k){
+      s.classList.toggle('is-active', k === i);
+      s.classList.toggle('is-past', k < i);
+      if (k === i) s.removeAttribute('inert'); else s.setAttribute('inert', '');
+    });
+    slides[i].scrollTop = 0;
+    cur = i;
+    updateNav();
+    if (setHash) { try { location.hash = 'slide-' + (i + 1); } catch (e) {} }
+  }
+  function hashIndex(){
+    var m = /^#slide-(\d+)$/.exec(location.hash || '');
+    if (!m) return null;
+    var n = parseInt(m[1], 10) - 1;
+    return (n >= 0 && n < total) ? n : null;
+  }
+  window.addEventListener('hashchange', function(){ var n = hashIndex(); if (n !== null && n !== cur) go(n); });
+  prevBtn.addEventListener('click', function(){ go(cur - 1, true); });
+  nextBtn.addEventListener('click', function(){ go(cur + 1, true); });
+  document.addEventListener('click', function(e){
+    var g = e.target.closest ? e.target.closest('[data-go]') : null;
+    if (g) go(parseInt(g.getAttribute('data-go'), 10) - 1, true);
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown') { go(cur + 1, true); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { go(cur - 1, true); }
+    else if (e.key === 'Home') { go(0, true); }
+    else if (e.key === 'End') { go(total - 1, true); }
+  });
+  var sx = 0, sy = 0, stage = $('#stage');
+  stage.addEventListener('touchstart', function(e){ if (e.touches.length === 1) { sx = e.touches[0].clientX; sy = e.touches[0].clientY; } }, { passive:true });
+  stage.addEventListener('touchend', function(e){
+    if (!e.changedTouches.length) return;
+    var dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+    if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.8) go(cur + (dx < 0 ? 1 : -1), true);
+  }, { passive:true });
+
+  /* ---------- slide 2 : matrix ---------- */
+  var YEARS = [2027, 2028, 2029, 2030], GR = [6, 7, 8, 9], selYear = 0;
+  function renderMatrix(){
+    var h = '<div></div>';
+    YEARS.forEach(function(y, i){
+      h += '<button type="button" class="mx-year' + (i === selYear ? ' is-sel' : '') + '" data-year="' + i + '" aria-pressed="' + (i === selYear) + '">' + y + '</button>';
+    });
+    GR.forEach(function(g, gi){
+      h += '<div class="mx-grade">தரம் ' + g + '</div>';
+      YEARS.forEach(function(y, i){
+        var on = i >= gi, launch = i === gi;
+        h += '<div class="mx-cell' + (on ? ' on' : '') + (launch ? ' launch' : '') + (i === selYear ? ' col-sel' : '') + '" style="--c:var(--g' + g + ');--k:' + (gi + i) + '">' +
+          (launch ? '<span>தொடக்கம்</span>' : (on ? '<span>' + ic('check') + '</span>' : '')) + '</div>';
+      });
+    });
+    $('#matrix').innerHTML = h;
+    var active = GR.filter(function(g, gi){ return selYear >= gi; });
+    var newest = active[active.length - 1];
+    $('#yearcard').innerHTML =
+      '<div class="big">' + YEARS[selYear] + '</div>' +
+      '<p class="stm"><strong>' + YEARS[selYear] + ' ஆம் ஆண்டில் தரம் ' + newest + '</strong> இற்கான புதிய கலைத்திட்ட மறுசீரமைப்பு நடைமுறைப்படுத்தப்படும்.</p>' +
+      '<div class="lbl">புதிய நேர அட்டவணையைப் பின்பற்றும் தரங்கள்</div>' +
+      '<div class="gl">' + active.map(function(g){ return '<span class="gchip" style="--c:var(--g' + g + ')">தரம் ' + g + '</span>'; }).join('') + '</div>';
+  }
+  $('#matrix').addEventListener('click', function(e){
+    var b = e.target.closest('[data-year]');
+    if (!b) return;
+    selYear = parseInt(b.getAttribute('data-year'), 10);
+    renderMatrix();
+    var again = $('[data-year="' + selYear + '"]');
+    if (again) again.focus({ preventScroll:true });
+  });
+  renderMatrix();
+
+  /* ---------- slide 3 : credit hours ---------- */
+  var credits = 3;
+  function renderHours(){
+    var h = '';
+    for (var r = 0; r < credits; r++) {
+      h += '<div class="hrow"><span class="hl">Credit ' + (r + 1) + '</span><div class="hb">';
+      for (var k = 0; k < 10; k++) h += '<i style="--k:' + (r * 10 + k) + '" title="60 நிமிடங்கள்"></i>';
+      h += '</div></div>';
+    }
+    $('#hours').innerHTML = h;
+    $('#calcout').innerHTML = credits + ' × 10 = <strong>' + (credits * 10) + ' மணித்தியாலங்கள்</strong> = <strong>' + (credits * 600) + ' நிமிடங்கள்</strong>';
+    $$('#credpick .pill').forEach(function(p){ p.setAttribute('aria-checked', String(parseInt(p.getAttribute('data-c'), 10) === credits)); });
+  }
+  $('#credpick').addEventListener('click', function(e){
+    var b = e.target.closest('[data-c]');
+    if (!b) return;
+    credits = parseInt(b.getAttribute('data-c'), 10);
+    renderHours();
+  });
+  renderHours();
+  $$('.acc-h').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.parentNode;
+      var open = !item.classList.contains('open');
+      $$('.acc-i').forEach(function(a){ a.classList.remove('open'); $('.acc-h', a).setAttribute('aria-expanded', 'false'); });
+      if (open) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
+    });
+  });
+
+  /* ---------- slide 4 : credits chart ---------- */
+  var sel4 = 0;
+  var ESS = ITEMS.slice(0, 13);
+  function renderRows(){
+    $('#rows').innerHTML = ESS.map(function(it, i){
+      var segs = '';
+      for (var k = 0; k < 3; k++) segs += '<span class="seg' + (k < it.cr ? ' on' : '') + '" style="--k:' + k + '"></span>';
+      return '<button type="button" class="row' + (i === sel4 ? ' is-sel' : '') + '" role="option" aria-selected="' + (i === sel4) + '" data-i="' + i + '" style="--c:' + colorOf(it) + ';--r:' + i + '">' +
+        '<span class="nm"><i></i><span class="t">' + it.short + '</span></span>' +
+        '<span class="segs">' + segs + '<b>' + it.cr + '</b></span></button>';
+    }).join('');
+    renderDetail1();
+  }
+  function renderDetail1(){
+    var it = ESS[sel4];
+    var d = $('#detail1');
+    d.style.setProperty('--c', colorOf(it));
+    d.innerHTML =
+      '<div class="tags"><span class="chip col" style="--c:' + colorOf(it) + '">' + GROUPS[it.g][0] + '</span>' + (it.tag ? '<span class="chip">' + it.tag + '</span>' : '') + '</div>' +
+      '<div class="dn' + (it.name.length > 44 ? ' long' : '') + '">' + it.name + '</div>' +
+      '<div class="cr"><b>' + it.cr + '</b><span>Credits</span></div>' +
+      '<div class="kv"><span><strong>' + (it.cr * 10) + ' மணித்தியாலங்கள்</strong> = ' + (it.cr * 600) + ' நிமிடங்கள்</span><span>வாராந்த பாடவேளைகள்: <strong>' + it.pr + '</strong></span></div>';
+  }
+  $('#rows').addEventListener('click', function(e){
+    var b = e.target.closest('[data-i]');
+    if (!b) return;
+    sel4 = parseInt(b.getAttribute('data-i'), 10);
+    $$('#rows .row').forEach(function(r, i){ r.classList.toggle('is-sel', i === sel4); r.setAttribute('aria-selected', String(i === sel4)); });
+    renderDetail1();
+  });
+  renderRows();
+
+  /* ---------- slide 5 : optional modules ---------- */
+  var grade = 8, selMod = null, selLang = null;
+  function renderGrades(){
+    $('#gradepick').innerHTML = GR.map(function(g){
+      return '<button type="button" class="pill" role="radio" aria-checked="' + (g === grade) + '" data-g="' + g + '" style="--c:var(--g' + g + ')">' + g + '</button>';
+    }).join('');
+  }
+  function renderMods(){
+    if (selMod !== null && MODS[selMod].from && grade < MODS[selMod].from) { selMod = null; selLang = null; }
+    $('#gradenote').textContent = grade < 8 ? 'தொடர்பாடலும் ஊடகக் கல்வியும் 8 ஆம் தரத்திலிருந்து ஆரம்பமாகும்.' : 'எல்லா 6 மொடியூல்களும் தெரிவுக்குக் கிடைக்கும்.';
+    $('#mods').innerHTML = MODS.map(function(m, i){
+      var locked = m.from && grade < m.from;
+      var on = selMod === i;
+      var langs = (m.langs && on) ? '<div class="lg" role="group" aria-label="மொழி நயம்">' + m.langs.map(function(l, k){
+        return '<span class="chip" role="button" tabindex="0" data-lang="' + k + '" aria-pressed="' + (selLang === k) + '" style="--c:var(--' + m.g + ')">' + l + '</span>';
+      }).join('') + '</div>' : '';
+      var langHint = (m.langs && !on) ? '<div class="note">சிங்களம் · தமிழ் · ஆங்கிலம்</div>' : '';
+      return '<div class="mod' + (on ? ' is-sel' : '') + '" role="option" tabindex="' + (locked ? '-1' : '0') + '" aria-selected="' + on + '" aria-disabled="' + (!!locked) + '" data-m="' + i + '" style="--c:var(--' + m.g + ')">' +
+        '<span class="chk">' + ic('check') + '</span>' +
+        '<span class="no">' + (i + 1) + '</span>' +
+        '<div class="mn">' + m.n + '</div>' + langHint + langs +
+        '<div class="tg">' + (m.tag ? '<span class="chip">' + m.tag + '</span>' : '') + '<span class="chip">1 Credit</span>' + (locked ? '<span class="lock">8 ஆம் தரத்திலிருந்து</span>' : '') + '</div></div>';
+    }).join('');
+    var s = $('#summary');
+    if (selMod === null) {
+      s.className = 'summary';
+      s.innerHTML = '<span class="sm">ஒரு மொடியூலைத் தொட்டுத் தெரிவு செய்யுங்கள்.</span>';
+    } else {
+      var m = MODS[selMod];
+      var name = m.n + (m.langs && selLang !== null ? ' · ' + m.langs[selLang] : '');
+      s.className = 'summary ok';
+      s.style.setProperty('--c', 'var(--' + m.g + ')');
+      s.innerHTML = '<span class="sm">தரம் ' + grade + ' · இத்தவணைக்கான தெரிவு</span><strong>' + name + '</strong><span class="sm">1 Credit = 10 மணித்தியாலங்கள் (600 நிமிடங்கள்)</span>';
+    }
+  }
+  $('#gradepick').addEventListener('click', function(e){
+    var b = e.target.closest('[data-g]');
+    if (!b) return;
+    grade = parseInt(b.getAttribute('data-g'), 10);
+    renderGrades(); renderMods();
+  });
+  function pickMod(el){
+    var lang = el.closest('[data-lang]');
+    if (lang) { selLang = parseInt(lang.getAttribute('data-lang'), 10); renderMods(); return; }
+    var m = el.closest('[data-m]');
+    if (!m || m.getAttribute('aria-disabled') === 'true') return;
+    var i = parseInt(m.getAttribute('data-m'), 10);
+    if (selMod === i) { selMod = null; selLang = null; } else { selMod = i; selLang = null; }
+    renderMods();
+  }
+  $('#mods').addEventListener('click', function(e){ pickMod(e.target); });
+  $('#mods').addEventListener('keydown', function(e){
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.stopPropagation(); pickMod(e.target); }
+  });
+  renderGrades(); renderMods();
+
+  /* ---------- slide 6 : weekly periods ---------- */
+  var foc6 = null;
+  function renderWaffle(){
+    var cells = '', k = 0;
+    ITEMS.forEach(function(it, i){
+      for (var n = 0; n < it.pr; n++) { cells += '<span class="cell" data-i="' + i + '" style="--c:' + colorOf(it) + ';--k:' + k + '"></span>'; k++; }
+    });
+    $('#waffle').innerHTML = cells;
+    $('#legend').innerHTML = ITEMS.map(function(it, i){
+      return '<button type="button" class="lgr" role="option" aria-selected="false" data-i="' + i + '" style="--c:' + colorOf(it) + '"><i></i><span class="t">' + it.short + '</span><b>' + it.pr + '</b></button>';
+    }).join('');
+    $('#gleg').innerHTML = Object.keys(GROUPS).map(function(g){
+      return '<span class="chip col" style="--c:var(--' + g + ')">' + GROUPS[g][0] + '</span>';
+    }).join('');
+    applyFocus6();
+  }
+  function applyFocus6(){
+    var w = $('#waffle');
+    w.classList.toggle('has-f', foc6 !== null);
+    $$('.cell', w).forEach(function(c){ c.classList.toggle('hl', foc6 !== null && parseInt(c.getAttribute('data-i'), 10) === foc6); });
+    $$('#legend .lgr').forEach(function(r, i){ r.classList.toggle('is-sel', i === foc6); r.setAttribute('aria-selected', String(i === foc6)); });
+    var f = $('#wfocus');
+    if (foc6 === null) { f.innerHTML = 'ஒரு பாடத்தைத் தொட்டால் அதன் பாடவேளைகள் ஒளிரும்.'; }
+    else {
+      var it = ITEMS[foc6];
+      f.innerHTML = '<strong>' + it.name + '</strong><br>' + it.pr + ' பாடவேளைகள் · 40 இல் ' + (Math.round(it.pr / 40 * 1000) / 10) + '%';
+    }
+  }
+  $('#legend').addEventListener('click', function(e){
+    var b = e.target.closest('[data-i]');
+    if (!b) return;
+    var i = parseInt(b.getAttribute('data-i'), 10);
+    foc6 = (foc6 === i) ? null : i;
+    applyFocus6();
+  });
+  $('#legend').addEventListener('mouseover', function(e){
+    var b = e.target.closest('[data-i]');
+    if (b && window.matchMedia('(hover:hover)').matches) { foc6 = parseInt(b.getAttribute('data-i'), 10); applyFocus6(); }
+  });
+  $('#legend').addEventListener('mouseleave', function(){
+    if (window.matchMedia('(hover:hover)').matches) { foc6 = null; applyFocus6(); }
+  });
+  $('#waffle').addEventListener('click', function(e){
+    var c = e.target.closest('[data-i]');
+    if (!c) return;
+    var i = parseInt(c.getAttribute('data-i'), 10);
+    foc6 = (foc6 === i) ? null : i;
+    applyFocus6();
+  });
+  renderWaffle();
+
+  /* ---------- slide 7 : comparison ---------- */
+  var sortKey = 'src', sel7 = 2;
+  function order(){
+    var idx = ITEMS.map(function(_, i){ return i; });
+    if (sortKey === 'pr') idx.sort(function(a, b){ return (ITEMS[b].pr - ITEMS[a].pr) || (a - b); });
+    if (sortKey === 'cr') idx.sort(function(a, b){ return ((ITEMS[b].cr || 0) - (ITEMS[a].cr || 0)) || (a - b); });
+    return idx;
+  }
+  function renderCmp(){
+    var idx = order();
+    $('#crows').innerHTML = idx.map(function(i, r){
+      var it = ITEMS[i];
+      var cw = it.cr ? (it.cr / 5 * 100) : 0;
+      return '<button type="button" class="cr-row' + (i === sel7 ? ' is-sel' : '') + '" role="option" aria-selected="' + (i === sel7) + '" data-i="' + i + '" style="--r:' + r + '">' +
+        '<span class="t">' + it.short + '</span>' +
+        '<span class="bars">' +
+          '<span class="br c"><i style="--w:' + cw + '%"></i><em>' + (it.cr === null ? '–' : it.cr) + '</em></span>' +
+          '<span class="br p"><i style="--w:' + (it.pr / 5 * 100) + '%"></i><em>' + it.pr + '</em></span>' +
+        '</span></button>';
+    }).join('');
+    $$('#sortpick .pill').forEach(function(p){ p.setAttribute('aria-checked', String(p.getAttribute('data-s') === sortKey)); });
+    renderMain();
+  }
+  function renderMain(){
+    var it = ITEMS[sel7];
+    $('#insmain').innerHTML =
+      '<div class="dn' + (it.name.length > 44 ? ' long' : '') + '">' + it.name + '</div>' +
+      '<div class="pairs"><div class="a"><b>' + (it.cr === null ? '–' : it.cr) + '</b><span>Credits</span></div><div class="b"><b>' + it.pr + '</b><span>பாடவேளைகள் / வாரம்</span></div></div>' +
+      (it.cr === null ? '<div class="fn">இந்தப் பாடம் Credits அட்டவணையில் இடம்பெறவில்லை.</div>' : '') +
+      (it.optional ? '<div class="fn">ஒவ்வொரு தவணைக்கும் ஒரு பாடம் தெரிவு செய்யப்படும்.</div>' : '');
+  }
+  $('#crows').addEventListener('click', function(e){
+    var b = e.target.closest('[data-i]');
+    if (!b) return;
+    sel7 = parseInt(b.getAttribute('data-i'), 10);
+    $$('#crows .cr-row').forEach(function(r){ var on = parseInt(r.getAttribute('data-i'), 10) === sel7; r.classList.toggle('is-sel', on); r.setAttribute('aria-selected', String(on)); });
+    renderMain();
+  });
+  $('#sortpick').addEventListener('click', function(e){
+    var b = e.target.closest('[data-s]');
+    if (!b) return;
+    sortKey = b.getAttribute('data-s');
+    renderCmp();
+  });
+  renderCmp();
+
+  /* ---------- start ---------- */
+  var start = hashIndex();
+  go(start === null ? 0 : start, false, true);
+})();
+</script>
+
+</body></html>
